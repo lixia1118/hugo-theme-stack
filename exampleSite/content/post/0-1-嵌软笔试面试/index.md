@@ -10,7 +10,7 @@ tags = [
     "Patent indicator"
 ]
 +++
-![](1.jpg)
+![](notion-image.png)
 
 ## 1. 概念定义
 
