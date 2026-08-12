@@ -3,7 +3,7 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches:
-      - master  # 如果你的分支叫 master，请改成 master
+      - master  # 如果你的默认分支叫 master，请改成 master
 
 permissions:
   contents: read
@@ -27,13 +27,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.128.0'
           extended: true
 
       - name: Build
-        # 提示：从文件目录来看，如果你的文章和 config.yaml 都在 exampleSite 目录下，
-        # 请把下面这行改为：run: cd exampleSite && hugo --minify -d ../public
-        run: cd exampleSite && hugo --minify -d ../public
+        run: cd exampleSite && hugo --minify --themesDir ../.. -d ../public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
