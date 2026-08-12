@@ -5,10 +5,8 @@ date = "2026-08-07"
 description = "技术相似度计算方法说明"
 slug: tech-sim
 image: 1.jpg
-tags:
-    - Patent
-categories = 
-    -Patent indicator
+tags= ['Patent']
+categories = ['Patent indicator']
 ---
 ![](notion-image.png)
 
