@@ -1,1 +1,14 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+/* 修改全局默认字体 */
+:root {
+    /* 主文本字体（正文、TOC 等） */
+    --font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    /* 代码块字体 */
+    --font-family-code: "Fira Code", Consolas, Monaco, "Courier New", Courier, monospace;
+}
+
+/* 如果你希望文章正文单独使用某种字体（例如更适合阅读的衬线体） */
+.article-page .main-article {
+    font-family: "Georgia", "Source Serif Pro", "Noto Serif SC", serif;
+}
