@@ -1,4 +1,4 @@
----
++++
 author = "Joseph"
 title = "技术相似度计算方法"
 date = "2026-08-07"
@@ -7,7 +7,7 @@ slug= "tech-sim"
 image= "1.jpg"
 tags= ['Patent']
 categories = ['Patent indicator']
----
++++
 ![](notion-image.png)
 
 ## 1. 概念定义
