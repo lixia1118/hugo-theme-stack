@@ -1,0 +1,14 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // 获取 TOC 目录容器中的所有链接文本
+    const tocLinks = document.querySelectorAll('.widget--toc #TableOfContents a, .toc-a');
+    
+    // 正则表达式：匹配开头形如 "1.", "1.1", "1.1.1", "一、" 等编号和随后的空格
+    const numberPrefixRegex = /^(\d+(\.\d+)*\s*|[一二三四五六七八九十]+[、\.]\s*)/;
+
+    tocLinks.forEach(link => {
+        // 过滤掉开头的数字编号
+        link.textContent = link.textContent.replace(numberPrefixRegex, '');
+    });
+});
+</script>
