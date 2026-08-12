@@ -195,12 +195,6 @@ menu:
           params:
               icon: brand-orcid
 
-        - identifier: 
-          name: 
-          url: 
-          params:
-              icon: 
-
 related:
     includeNewer: true
     threshold: 60
