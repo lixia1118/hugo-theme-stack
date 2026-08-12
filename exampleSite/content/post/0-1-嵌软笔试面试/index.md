@@ -8,7 +8,6 @@ image= "1.jpg"
 tags= ['Patent']
 categories = ['Patent indicator']
 +++
-![](notion-image.png)
 
 ## 1. 概念定义
 
