@@ -1,6 +1,6 @@
 ---
-title: 个人介绍
-description: 这是我的个人介绍
+title: About
+description: Everything you need to know about this site and its author.
 date: '2022-07-29'
 aliases:
   - about-us
