@@ -1,15 +1,16 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
-/* 1. 强制覆盖 Stack 主题定义的所有字体变量 */
-:root {
-    --article-font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif !important;
-    --font-family-default: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif !important;
-}
-
-/* 2. 直接精准作用于文章正文区域及所有段落、列表、标题 */
+/* 修改文章正文中文为楷体 */
 .article-page,
 .main-article,
 .article-content,
 .article-content * {
-    /* 替换为你想要的字体名称 */
-    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif !important;
+    font-family: "Kaiti SC", "KaiTi", "楷体", "STKaiti", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* （可选）如果你希望整个网站（包括侧边栏、标题等）都显示为楷体，请取消下面代码的注释： */
+:root {
+    --font-family-default: "Kaiti SC", "KaiTi", "楷体", "STKaiti", sans-serif !important;
+}
+body {
+    font-family: "Kaiti SC", "KaiTi", "楷体", "STKaiti", sans-serif !important;
 }
