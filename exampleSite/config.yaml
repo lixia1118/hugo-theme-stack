@@ -7,17 +7,12 @@ title: Joseph's blog
 languages:
     en:
         languageName: English
-        title: Coucou's blog
+        title: Joseph's blog
         weight: 1
     zh-cn:
         languageName: 中文
         title: 演示站点
         weight: 2
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
@@ -196,7 +191,7 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/Acoucou/hugo-theme-stack
+          url: https://github.com/lixia1118/hugo-theme-stack
           params:
               icon: brand-github
 
