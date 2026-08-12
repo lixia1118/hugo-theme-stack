@@ -1,1 +1,13 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+/* 隐藏右侧 TOC 自动生成的序号 */
+.widget.toc {
+    #TableOfContents {
+        ol, ul {
+            list-style-type: none; /* 移除列表默认样式 */
+        }
+        
+        li a::before {
+            display: none !important; /* 隐藏主题自动生成的序号前缀 */
+        }
+    }
+}
