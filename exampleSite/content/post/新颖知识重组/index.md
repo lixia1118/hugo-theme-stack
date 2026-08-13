@@ -69,10 +69,10 @@ $$
 
 ### 1.5 Normalized Novelty 指标定义
 
-$Normalized Novelty$ 用于消除同年份同技术领域的系统性差异，使得不同领域和年份的 novelty 值可以比较：
+$Normalized \, Novelty$ 用于消除同年份同技术领域的系统性差异，使得不同领域和年份的 novelty 值可以比较：
 
 $$
-Normalized Novelty = \text{Novelty} - \bar{\mu}_{\text{year-1}, \text{IPC}}
+Normalized \, Novelty = \text{Novelty} - \bar{\mu}_{\text{year-1}, \text{IPC}}
 $$
 
 其中 $\bar{\mu}_{\text{year-1}, \text{IPC}}$ 表示**前一年**同 IPC 技术领域所有专利的平均 novelty 值。
@@ -87,11 +87,7 @@ $$
 - Normalized Novelty < 0：该专利的新颖性低于同期同领域前一年的平均水平
 - 该指标消除了技术和时间趋势的影响，便于跨领域跨时期比较
 ### 1.5 与其他相似指标的对比
-> Our measure has similarities to several prior measures in the literature
->
-> [^1]: Eggers, J. P., & Kaul, A. (2018).
->
-> . First, our measure is similar to Fleming’s (2001) measure of “component familiarity,” except that Fleming’s measure captures combinations that are new to the inventor, while our measure identifies combinations that are new to the field. Second, our measure is similar to Trajtenberg, Henderson, and Jaffe’s (1997) measure of “originality,” except that their measure focuses on the diversity of a patent’s citations, while ours focuses on their novelty. Third, our measure is similar in spirit to one developed by Dahlin and Behrens (2005), except that they measure novelty by comparing the pattern of citations at the patent level, while our measure of novelty is based on technology class level comparisons, making our measure both more sensitive to rare connections made by patents with otherwise conventional citation patterns, and less prone to bias from examiner-added citations (Alca ́cer  & Gittelman, 2006). Finally, Aharonson and Schilling (2016) develop a measure of “outlier patents” based on the co-occurrence of multiple classifications in the same patent, which is quite similar to ours; the main difference being that our measure focuses on citation links between the class of the citing patent and the class of the cited patent.
+> [Eggers, J. P. & Kaul, A. (2018)] Our measure has similarities to several prior measures in the literature. First, our measure is similar to Fleming’s (2001) measure of “component familiarity,” except that Fleming’s measure captures combinations that are new to the inventor, while our measure identifies combinations that are new to the field. Second, our measure is similar to Trajtenberg, Henderson, and Jaffe’s (1997) measure of “originality,” except that their measure focuses on the diversity of a patent’s citations, while ours focuses on their novelty. Third, our measure is similar in spirit to one developed by Dahlin and Behrens (2005), except that they measure novelty by comparing the pattern of citations at the patent level, while our measure of novelty is based on technology class level comparisons, making our measure both more sensitive to rare connections made by patents with otherwise conventional citation patterns, and less prone to bias from examiner-added citations (Alca ́cer  & Gittelman, 2006). Finally, Aharonson and Schilling (2016) develop a measure of “outlier patents” based on the co-occurrence of multiple classifications in the same patent, which is quite similar to ours; the main difference being that our measure focuses on citation links between the class of the citing patent and the class of the cited patent. 
 
 ## 二、数据结构
 
