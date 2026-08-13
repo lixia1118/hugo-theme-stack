@@ -468,7 +468,7 @@ python calculate_link_novelty.py \
 
 ## 八、参考文献
 
-1. <a id="ref-Eggers2018"></a> Eggers, J. P., & Kaul, A. (2018). Motivation and Ability? A Behavioral Perspective on the Pursuit of Radical Invention in Multi-Technology Incumbents. *Academy of Management Journal, 61*(1), 67-91. https://doi.org/10.5465/amj.2016.0486
+1. <div id="ref-Eggers2018"> Eggers, J. P., & Kaul, A. (2018). Motivation and Ability? A Behavioral Perspective on the Pursuit of Radical Invention in Multi-Technology Incumbents. *Academy of Management Journal, 61*(1), 67-91. https://doi.org/10.5465/amj.2016.0486 </div>
 
    **摘要（译）**：
    本文从行为理论的视角，研究在位企业如何平衡追求激进技术发明的动机与能力。我们区分了企业追求激进发明的动机（受绩效相对于期望水平的影响）和成功开发激进发明的能力（受现有知识基础的影响）。使用1980-1997年美国专利数据，我们发现动机和能力在追求激进发明方面呈现倒U型关系：当绩效略低于期望时，企业倾向于过度投资于激进发明；而当绩效远高于期望时，则投资不足。我们的研究揭示了动机与能力之间的关键失配区域，为理解在位企业的技术追求提供了新的理论视角。
@@ -479,6 +479,7 @@ python calculate_link_novelty.py \
 
    **摘要（译）**：
    人工智能（AI）如何使以前不可行的知识组合成为可能？本文提出并检验了一种理论，解释了AI作为使能技术如何通过"桥接"效应促进新颖知识重组。研究表明，AI通过其预测能力和传输共享解决方案的能力，作为强大的共享层发挥作用，从而在过去不相关的技术元素之间创建桥梁。我们的分析表明，基于AI的发明比不基于AI的类似发明更可能涉及新颖的知识重组，且AI能够桥接和连接以前分散的知识领域。这些发现表明，AI不仅仅是"发明新方法"（作为研发工具），而且从根本上重塑了发明活动本身的性质。
+   
    本文采用 Eggers & Kaul (2018) 的 LINK 指标测量方法，研究AI发明的知识组合新颖性特征。
 
 
