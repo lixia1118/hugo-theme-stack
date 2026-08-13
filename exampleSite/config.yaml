@@ -1,7 +1,7 @@
 baseurl: "https://lixia1118.github.io/hugo-theme-stack/"
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
+paginate: 2
 title: Joseph's blog
 
 languages:
