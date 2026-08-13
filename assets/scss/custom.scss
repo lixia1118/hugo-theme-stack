@@ -40,10 +40,4 @@ body {
         display: inline-block !important;
     }
 }
-/* 点击引用跳转后，高亮对应的参考文献 */
-:target {
-    background-color: rgba(255, 235, 59, 0.3);
-    border-left: 4px solid #4caf50;
-    padding-left: 8px;
-    transition: background-color 0.5s ease;
-}
+
