@@ -14,3 +14,28 @@
 body {
     font-family: Georgia, "Times New Roman", "Source Serif Pro", "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif !important;
 }
+/* 分页导航栏箭头保底显示 */
+.pagination {
+    /* 左箭头兜底 */
+    .page-item:first-child a::before,
+    .page-link[rel="prev"]::before {
+        content: "‹" !important;
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    /* 右箭头兜底 */
+    .page-item:last-child a::before,
+    .page-link[rel="next"]::before {
+        content: "›" !important;
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    /* 隐藏找不到图片时的空白占位 */
+    .icon {
+        display: inline-block;
+    }
+}
