@@ -101,7 +101,7 @@ $$
 #### Up_to_T计算公式
 
 $$
-TechSim_{upToT1} = \frac{T_t \cdot \bar{T}_{t_0:(t-1)}}{\sqrt{\sum_k T_{t,k}^2} \times \sqrt{\sum_k \bar{T}_{t_0:(t-1),k}^2}
+\text{TechSim}_{upToT1} = \frac{T_t^\top \bar{T}_{t_0:(t-1)}}{\|T_t\| \times \|\bar{T}_{t_0:(t-1)}\|}
 $$
 
 其中 $\bar{T}_{t_0:(t-1)}$ 是从公司首次有专利到第*t*-1个有专利年份的平均IPC占比向量。
