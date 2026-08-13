@@ -280,6 +280,6 @@ python calculate_tech_similarity.py
 
 ## 参考文献
 
-1. **Byun, S.K., Oh, J.-M., Xia, H. (2021)** Incremental vs. Breakthrough Innovation: The Role of Technology Spillovers. *Management Science*, 67, 1779–1802. https://doi.org/10.1287/mnsc.2019.3507
-2. **Tong, T.W., He, W., Chen, L., He, Z., Lu, J. (2026)** Patent regime shift and firm innovation strategy: Evidence from the Second Amendment to China’s Patent Law. Strategic Management Journal, Mar. 2026, smj.70074. https://doi.org/10.1002/smj.70074
-3. **沈坤荣, 林剑威, 傅元海 (2023)** 网络基础设施建设、信息可得性与企业创新边界. *中国工业经济*, no.1, 57–75. https://doi.org/10.19581/j.cnki.ciejournal.2023.01.014
+1. Byun, S.K., Oh, J.-M., Xia, H. (2021) Incremental vs. Breakthrough Innovation: The Role of Technology Spillovers. *Management Science*, 67, 1779–1802. https://doi.org/10.1287/mnsc.2019.3507
+2. Tong, T.W., He, W., Chen, L., He, Z., Lu, J. (2026) Patent regime shift and firm innovation strategy: Evidence from the Second Amendment to China’s Patent Law. Strategic Management Journal, Mar. 2026, smj.70074. https://doi.org/10.1002/smj.70074
+3. 沈坤荣, 林剑威, 傅元海 (2023) 网络基础设施建设、信息可得性与企业创新边界. *中国工业经济*, no.1, 57–75. https://doi.org/10.19581/j.cnki.ciejournal.2023.01.014
