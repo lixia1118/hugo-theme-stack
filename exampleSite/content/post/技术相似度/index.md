@@ -2,7 +2,7 @@
 author = "Joseph"
 title = "技术相似度计算方法"
 date = "2026-08-07"
-description = "技术相似度计算方法说明"
+description = "Technology closeness or similarity"
 slug= "tech-sim"
 tags = ["Patent"]
 image = "cover.png"
@@ -13,7 +13,7 @@ categories = ['Patent indicator']
 
 ### 1.1 技术相似度（Technology Similarity）
 
-技术相似度是衡量企业在不同时间点技术领域重叠程度的指标。如果企业在相邻年份的专利主要集中在相同的技术领域，则技术相似度高；如果企业进入新的技术领域，则技术相似度降低。
+技术相似度是衡量企业在不同时间点技术领域重叠程度的指标。如果企业在相邻年份的专利主要集中在相同的技术领域，则技术相似度高；如果企业进入新的技术领域，则技术相似度降低。该指标也可用于衡量**不同**企业之间的技术相似或接近程度。
 
 ### 1.2 技术领域向量
 
