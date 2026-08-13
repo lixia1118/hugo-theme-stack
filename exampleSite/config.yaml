@@ -218,15 +218,15 @@ markup:
               - '$'
             - - '\('
               - '\)'
-    tableOfContents:
-        endLevel: 4
-        ordered: true
-        startLevel: 2
-    highlight:
-        noClasses: false
-        codeFences: true
-        guessSyntax: true
-        lineNoStart: 1
-        lineNos: false
-        lineNumbersInTable: false
-        tabWidth: 4
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: false
+    tabWidth: 4
