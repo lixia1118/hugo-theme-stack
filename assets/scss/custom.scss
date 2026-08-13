@@ -4,13 +4,13 @@
 .main-article,
 .article-content,
 .article-content * {
-    font-family: "Arial", "Times New Roman", "Noto Sans TC", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑",  serif !important;
+    font-family: Georgia, "Times New Roman", "Source Serif Pro", "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif !important;
 }
 
 /* （可选）如果你希望整个网站（包括侧边栏、标题等）都显示为楷体，请取消下面代码的注释： */
 :root {
-    --font-family-default: "Arial", "Times New Roman", "Noto Sans TC",  "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑",  serif !important;
+    --font-family-default: Georgia, "Times New Roman", "Source Serif Pro", "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif !important;
 }
 body {
-    font-family:"Arial", "Times New Roman", "Noto Sans TC",  "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑",  serif !important;
+    font-family: Georgia, "Times New Roman", "Source Serif Pro", "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif !important;
 }
