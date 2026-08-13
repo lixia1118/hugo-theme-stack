@@ -43,7 +43,7 @@ $$
 $Novelty$ 用于衡量单个专利的新颖程度：
 
 $$
-\text{Novelty} = 1 - \min(\text{LINK of all citations})
+Novelty = 1 - \min(\text{LINK of all citations})
 $$
 
 即用 1 减去该专利所有后向引用中最低的 $LINK$ 值。
@@ -57,20 +57,22 @@ $$
 $RADICAL$ 是二元变量，使用从大到小依次排列所处的分位数来识别"激进创新"专利：
 
 $$
-\text{RADICAL}_{p} = \begin{cases}
+
+RADICAL_{p} = \begin{cases}
 1 & \text{if } \text{Novelty} > \text{Percentile}_{p}(\text{Novelty in same year and IPC}) \\
 0 & \text{otherwise}
 \end{cases}
+
 $$
 
-其中 $p$ 通常取 90、95 或 99，表示 $novelty$ 值是否处于同年份同技术领域的前 （1-$p$）%，或者说该专利的$novelty$数值已经超过了$p$%的其他专利
+其中 *p* 通常取 90、95 或 99，表示 novelty 值是否处于同年份同技术领域的前 （1-*p*）%，或者说该专利的novelty值已经超过了 *p* %的其他专利
 
 ### 1.5 Normalized Novelty 指标定义
 
 $Normalized Novelty$ 用于消除同年份同技术领域的系统性差异，使得不同领域和年份的 novelty 值可以比较：
 
 $$
-\text{Normalized Novelty} = \text{Novelty} - \bar{\mu}_{\text{year-1}, \text{IPC}}
+Normalized Novelty = \text{Novelty} - \bar{\mu}_{\text{year-1}, \text{IPC}}
 $$
 
 其中 $\bar{\mu}_{\text{year-1}, \text{IPC}}$ 表示**前一年**同 IPC 技术领域所有专利的平均 novelty 值。
