@@ -57,12 +57,10 @@ $$
 $RADICAL$ 是二元变量，使用从大到小依次排列所处的分位数来识别"激进创新"专利：
 
 $$
-
 RADICAL_{p} = \begin{cases}
 1 & \text{if } \text{Novelty} > \text{Percentile}_{p}(\text{Novelty in same year and IPC}) \\
 0 & \text{otherwise}
 \end{cases}
-
 $$
 
 其中 *p* 通常取 90、95 或 99，表示 novelty 值是否处于同年份同技术领域的前 （1-*p*）%，或者说该专利的novelty值已经超过了 *p* %的其他专利
