@@ -85,7 +85,7 @@ $$
 - Normalized Novelty < 0：该专利的新颖性低于同期同领域前一年的平均水平
 - 该指标消除了技术和时间趋势的影响，便于跨领域跨时期比较
 ### 1.5 与其他相似指标的对比
-> [Eggers & Kaul (2018)](https://doi.org/10.5465/amj.2016.0486): Our measure has similarities to several prior measures in the literature. First, our measure is similar to Fleming’s (2001) measure of “component familiarity,” except that Fleming’s measure captures combinations that are new to the inventor, while our measure identifies combinations that are new to the field. Second, our measure is similar to Trajtenberg, Henderson, and Jaffe’s (1997) measure of “originality,” except that their measure focuses on the diversity of a patent’s citations, while ours focuses on their novelty. Third, our measure is similar in spirit to one developed by Dahlin and Behrens (2005), except that they measure novelty by comparing the pattern of citations at the patent level, while our measure of novelty is based on technology class level comparisons, making our measure both more sensitive to rare connections made by patents with otherwise conventional citation patterns, and less prone to bias from examiner-added citations (Alcacer  & Gittelman, 2006). Finally, Aharonson and Schilling (2016) develop a measure of “outlier patents” based on the co-occurrence of multiple classifications in the same patent, which is quite similar to ours; the main difference being that our measure focuses on citation links between the class of the citing patent and the class of the cited patent. 
+> [Eggers & Kaul (2018)](https://journals.aom.org/doi/10.5465/amj.2015.1123): Our measure has similarities to several prior measures in the literature. First, our measure is similar to Fleming’s (2001) measure of “component familiarity,” except that Fleming’s measure captures combinations that are new to the inventor, while our measure identifies combinations that are new to the field. Second, our measure is similar to Trajtenberg, Henderson, and Jaffe’s (1997) measure of “originality,” except that their measure focuses on the diversity of a patent’s citations, while ours focuses on their novelty. Third, our measure is similar in spirit to one developed by Dahlin and Behrens (2005), except that they measure novelty by comparing the pattern of citations at the patent level, while our measure of novelty is based on technology class level comparisons, making our measure both more sensitive to rare connections made by patents with otherwise conventional citation patterns, and less prone to bias from examiner-added citations (Alcacer  & Gittelman, 2006). Finally, Aharonson and Schilling (2016) develop a measure of “outlier patents” based on the co-occurrence of multiple classifications in the same patent, which is quite similar to ours; the main difference being that our measure focuses on citation links between the class of the citing patent and the class of the cited patent. 
 
 ## 二、数据结构
 
@@ -468,14 +468,14 @@ python calculate_link_novelty.py \
 
 ## 八、参考文献
 
-1. Eggers, J. P., & Kaul, A. (2018). Motivation and Ability? A Behavioral Perspective on the Pursuit of Radical Invention in Multi-Technology Incumbents. *Academy of Management Journal*, 61(1), 67-91. https://doi.org/10.5465/amj.2016.0486
+1. Eggers, J. P., & Kaul, A. (2018). Motivation and Ability? A Behavioral Perspective on the Pursuit of Radical Invention in Multi-Technology Incumbents. *Academy of Management Journal*, 61(1), 67-91. https://journals.aom.org/doi/10.5465/amj.2015.1123
 
    **摘要（译）**：
    本文从行为理论的视角，研究在位企业如何平衡追求激进技术发明的动机与能力。我们区分了企业追求激进发明的动机（受绩效相对于期望水平的影响）和成功开发激进发明的能力（受现有知识基础的影响）。使用1980-1997年美国专利数据，我们发现动机和能力在追求激进发明方面呈现倒U型关系：当绩效略低于期望时，企业倾向于过度投资于激进发明；而当绩效远高于期望时，则投资不足。我们的研究揭示了动机与能力之间的关键失配区域，为理解在位企业的技术追求提供了新的理论视角。
 
    本文提出的 LINK 和 DISTANT 指标为测量专利的知识组合新颖性提供了基础框架。
 
-2. Qu, Y., Fang, Y., & Park, Y. (2025). Unlocking novel knowledge recombination: How AI bridges technological domains. *Strategic Management Journal*. (Advance online publication). https://doi.org/10.1002/smj.70080
+2. Qu, Y., Fang, Y., & Park, Y. (2025). Unlocking novel knowledge recombination: How AI bridges technological domains. *Strategic Management Journal*. (Advance online publication). https://sms.onlinelibrary.wiley.com/doi/10.1002/smj.70080
 
    **摘要（译）**：
    人工智能（AI）如何使以前不可行的知识组合成为可能？本文提出并检验了一种理论，解释了AI作为使能技术如何通过"桥接"效应促进新颖知识重组。研究表明，AI通过其预测能力和传输共享解决方案的能力，作为强大的共享层发挥作用，从而在过去不相关的技术元素之间创建桥梁。我们的分析表明，基于AI的发明比不基于AI的类似发明更可能涉及新颖的知识重组，且AI能够桥接和连接以前分散的知识领域。这些发现表明，AI不仅仅是"发明新方法"（作为研发工具），而且从根本上重塑了发明活动本身的性质。
