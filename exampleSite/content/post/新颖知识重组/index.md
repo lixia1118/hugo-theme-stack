@@ -69,10 +69,10 @@ $$
 
 ### 1.5 Normalized Novelty 指标定义
 
-$Normalized \, Novelty$ 用于消除同年份同技术领域的系统性差异，使得不同领域和年份的 novelty 值可以比较：
+$Normalized\ Novelty$ 用于消除同年份同技术领域的系统性差异，使得不同领域和年份的 novelty 值可以比较：
 
 $$
-Normalized \, Novelty = \text{Novelty} - \bar{\mu}_{\text{year-1}, \text{IPC}}
+Normalized\ Novelty = \text{Novelty} - \bar{\mu}_{\text{year-1}, \text{IPC}}
 $$
 
 其中 $\bar{\mu}_{\text{year-1}, \text{IPC}}$ 表示**前一年**同 IPC 技术领域所有专利的平均 novelty 值。
