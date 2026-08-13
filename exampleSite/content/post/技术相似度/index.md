@@ -5,6 +5,7 @@ date = "2026-08-07"
 description = "技术相似度计算方法说明"
 slug= "tech-sim"
 tags = ["Patent"]
+image = "2.jpg"
 categories = ['Patent indicator']
 +++
 
