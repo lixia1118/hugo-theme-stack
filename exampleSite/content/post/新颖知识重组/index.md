@@ -64,8 +64,6 @@ $$
 
 其中 $p$ 通常取 90、95 或 99，表示 $novelty$ 值是否处于同年份同技术领域的前 （1-$p$）%，或者说该专利的$novelty$数值已经超过了$p$%的其他专利
 
----
-
 ## 2. 数据结构
 
 ### 2.1 输入数据
@@ -86,13 +84,12 @@ $$
 - `H01L` - 半导体器件
 - `C07D` - 杂环化合物
 
----
 
 ## 3. 计算流程
 
 ### 3.1 总体流程图
 
-```
+``` {lineNos=false}
 ┌─────────────────────────────────────────────────────────────┐
 │                     1. 数据加载阶段                          │
 ├─────────────────────────────────────────────────────────────┤
@@ -162,7 +159,7 @@ $$
 
 #### 步骤 1: 数据加载
 
-```python
+```python {lineNos=false}
 patents, graph, citation_info, ipc_data = load_data_from_pkl(pkl_path)
 ```
 
@@ -170,7 +167,7 @@ patents, graph, citation_info, ipc_data = load_data_from_pkl(pkl_path)
 
 #### 步骤 2: 构建专利信息表
 
-```python
+```python {lineNos=false}
 patent_info = {
     'CN1010408': {'year': 1986, 'ipc_4d': 'C05F', ...},
     'CN102889914': {'year': 2012, 'ipc_4d': 'G01F', ...},
@@ -182,13 +179,13 @@ patent_info = {
 
 #### 步骤 3: 处理引用网络
 
-```python
+```python {lineNos=false}
 citation_network = process_citations_in_chunks(citation_info, patent_info)
 ```
 
 构建引用网络，只保留两端专利都在有效集中的引用：
 
-```python
+```python {lineNos=false}
 citation_network = {
     'CN1010408': [
         {'cited_patent': 'CN1001234', 'cited_year': 1980, 'cited_ipc_4d': 'C05B'},
@@ -201,13 +198,13 @@ citation_network = {
 
 #### 步骤 4: 计算 LINK 矩阵
 
-```python
+```python {lineNos=false}
 link_dict = calculate_link_matrix(citation_network, patent_info, lookback=5)
 ```
 
 LINK 矩阵结构：
 
-```python
+```python {lineNos=false}
 link_dict = {
     (1986, 'G06F', 'H01L'): 0.023,   # G06F 在1986年引用H01L的LINK值
     (1986, 'G06F', 'G06F'): 0.845,   # G06F 引用自身的LINK值（通常较高）
@@ -223,7 +220,7 @@ $$
 
 #### 步骤 5: 计算 Novelty
 
-```python
+```python {lineNos=false}
 df_novelty = calculate_patent_novelty(citation_network, patent_info, link_dict)
 ```
 
@@ -235,11 +232,10 @@ $$
 
 #### 步骤 6: 计算 RADICAL
 
-```python
+```python {lineNos=false}
 df_novelty = calculate_radical_indicators(df_novelty)
 ```
 
----
 
 ## 4. 代码结构
 
@@ -259,7 +255,7 @@ df_novelty = calculate_radical_indicators(df_novelty)
 
 #### LINK 计算伪代码
 
-```python
+```python {lineNos=false}
 def calculate_link_matrix(citation_network, patent_info, lookback=5):
     # 1. 收集所有引用记录
     records = []
@@ -282,7 +278,7 @@ def calculate_link_matrix(citation_network, patent_info, lookback=5):
 
 #### Novelty 计算伪代码
 
-```python
+```python {lineNos=false}
 def calculate_patent_novelty(citation_network, patent_info, link_dict):
     results = []
     for norm_pub in patent_info:
@@ -311,20 +307,19 @@ def calculate_patent_novelty(citation_network, patent_info, link_dict):
     return DataFrame(results)
 ```
 
----
 
 ## 5. 运行指南
 
 ### 5.1 环境要求
 
-```bash
+```bash {lineNos=false}
 # Python 3.8+
 pip install pandas numpy tqdm igraph
 ```
 
 ### 5.2 基本用法
 
-```bash
+```bash {lineNos=false}
 # 使用默认参数
 python calculate_link_novelty.py
 
@@ -363,7 +358,6 @@ python calculate_link_novelty.py \
 | `radical_95` | int | 是否为前 5% 高新颖专利 |
 | `radical_99` | int | 是否为前 1% 高新颖专利 |
 
----
 
 ## 6. 示例计算
 
@@ -401,7 +395,6 @@ python calculate_link_novelty.py \
 
 这表明 P1 至少有一条非常远距离的知识组合（引用了一个罕见的技术领域连接）。
 
----
 
 ## 7. 注意事项
 
@@ -430,7 +423,6 @@ python calculate_link_novelty.py \
 - 也可以使用前 3 位（section+class，如 G06）更宽泛
 - 或前 8 位（如 G06F11/00）更细粒度
 
----
 
 ## 8. 参考文献
 
