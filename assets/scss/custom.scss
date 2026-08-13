@@ -14,28 +14,29 @@
 body {
     font-family: Georgia, "Times New Roman", "Source Serif Pro", "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif !important;
 }
-/* 分页导航栏箭头保底显示 */
+/* 彻底修复 Hugo Stack 主题翻页箭头及图标显示 */
 .pagination {
-    /* 左箭头兜底 */
-    .page-item:first-child a::before,
-    .page-link[rel="prev"]::before {
+    /* 1. 隐藏可能加载失败或裂开的真实 SVG 图标容器 */
+    .pagination--previous .icon,
+    .pagination--next .icon {
+        display: none !important;
+    }
+
+    /* 2. 为上一页（左箭头）添加符号兜底 */
+    .pagination--previous a::before {
         content: "‹" !important;
-        font-size: 1.2rem;
-        font-weight: bold;
-        line-height: 1;
+        font-size: 1.5rem !important;
+        font-weight: bold !important;
+        line-height: 1 !important;
+        display: inline-block !important;
     }
 
-    /* 右箭头兜底 */
-    .page-item:last-child a::before,
-    .page-link[rel="next"]::before {
+    /* 3. 为下一页（右箭头）添加符号兜底 */
+    .pagination--next a::before {
         content: "›" !important;
-        font-size: 1.2rem;
-        font-weight: bold;
-        line-height: 1;
-    }
-
-    /* 隐藏找不到图片时的空白占位 */
-    .icon {
-        display: inline-block;
+        font-size: 1.5rem !important;
+        font-weight: bold !important;
+        line-height: 1 !important;
+        display: inline-block !important;
     }
 }
