@@ -1,3 +1,4 @@
++++
 author = "Joseph"
 title = "知识重组新颖度计算"
 date = "2026-08-07"
@@ -10,7 +11,7 @@ categories = [
 tags = [
     "Patent"
 ]
-
++++
 ## 一、指标背景与定义
 
 ### 1.1 理论基础
