@@ -101,10 +101,9 @@ $$
 #### Up_to_T计算公式
 
 $$
-
-\text{TechSim}_{upToT1} = \frac{\sum_k \left( T_{t,k} \times \bar{T}_{t_0:(t-1),k} \right)}{\sqrt{\sum_k T_{t,k}^2} \times \sqrt{\sum_k \bar{T}_{t_0:(t-1),k}^2}}
-
+\text{TechSim}\_{\text{upToT1}} = \frac{\sum\_k \left( T\_{t,k} \times \bar{T}\_{t\_0:(t-1),k} \right)}{\sqrt{\sum\_k T\_{t,k}^2} \times \sqrt{\sum\_k \bar{T}\_{t\_0:(t-1),k}^2}}
 $$
+
 
 其中 $\bar{T}_{t_0:(t-1)}$ 是从公司首次有专利到第*t*-1个有专利年份的平均IPC占比向量。
 
@@ -260,28 +259,8 @@ python calculate_tech_similarity.py
 - 预计运行时间：30-60分钟（取决于硬件配置）
 - 使用分块读取以处理大型CSV文件
 
-## 8. 注意事项
-
-### 8.1 数据质量
-
-1. **缺失IPC数据**：部分专利记录可能没有IPC分类信息
-2. **IPC格式不一致**：原始数据中IPC分类的格式可能不一致
-
-### 8.2 计算说明
-
-1. **去重处理**：计算全部IPC时，同一专利的多个IPC分类会分别计入
-2. **占比归一化**：每个公司的IPC占比之和始终为1
-3. **累计窗口**：up_to_t计算的是从公司首次有专利开始的累计平均
-
-### 8.3 学术应用建议
-
-1. **滞后性**：建议将技术相似度指标滞后1期使用，避免内生性问题
-2. **缺失值处理**：根据研究需要选择删除或插值处理缺失值
-3. **指标选择**：可根据研究设计选择合适的IPC粒度和时间窗口
-4. **对标分析**：可按行业分组计算技术相似度的均值进行对标
-
 ## 参考文献
 
 1. Byun, S.K., Oh, J.-M., Xia, H. (2021) Incremental vs. Breakthrough Innovation: The Role of Technology Spillovers. *Management Science*, 67, 1779–1802. https://doi.org/10.1287/mnsc.2019.3507
-2. Tong, T.W., He, W., Chen, L., He, Z., Lu, J. (2026) Patent regime shift and firm innovation strategy: Evidence from the Second Amendment to China’s Patent Law. Strategic Management Journal, Mar. 2026, smj.70074. https://doi.org/10.1002/smj.70074
+2. Tong, T.W., He, W., Chen, L., He, Z., Lu, J. (2026) Patent regime shift and firm innovation strategy: Evidence from the Second Amendment to China’s Patent Law. *Strategic Management Journal*, Mar. 2026, smj.70074. https://doi.org/10.1002/smj.70074
 3. 沈坤荣, 林剑威, 傅元海 (2023) 网络基础设施建设、信息可得性与企业创新边界. *中国工业经济*, no.1, 57–75. https://doi.org/10.19581/j.cnki.ciejournal.2023.01.014
