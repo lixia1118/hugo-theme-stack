@@ -184,12 +184,12 @@ params:
 menu:
     main: []
 
-    social:
-        - identifier: orcid
-          name: ORCiD
-          url: https://orcid.org/0000-0003-2465-9232
-          params:
-              icon: brand-orcid
+    # social:
+    #     - identifier: orcid
+    #       name: ORCiD
+    #       url: https://orcid.org/0000-0003-2465-9232
+    #       params:
+    #           icon: brand-orcid
 
 related:
     includeNewer: true
