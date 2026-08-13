@@ -468,7 +468,7 @@ python calculate_link_novelty.py \
 
 ## 八、参考文献
 
-1. Eggers, J. P., & Kaul, A. (2018). Motivation and Ability? A Behavioral Perspective on the Pursuit of Radical Invention in Multi-Technology Incumbents. *Academy of Management Journal*, 61(1), 67-91. https://doi.org/10.5465/amj.2016.0486 {#eggers2018}
+1. <span id="eggers2018"></span> Eggers, J. P., & Kaul, A. (2018). Motivation and Ability? A Behavioral Perspective on the Pursuit of Radical Invention in Multi-Technology Incumbents. *Academy of Management Journal*, 61(1), 67-91. https://doi.org/10.5465/amj.2016.0486 {#eggers2018}
 
    **摘要（译）**：
    本文从行为理论的视角，研究在位企业如何平衡追求激进技术发明的动机与能力。我们区分了企业追求激进发明的动机（受绩效相对于期望水平的影响）和成功开发激进发明的能力（受现有知识基础的影响）。使用1980-1997年美国专利数据，我们发现动机和能力在追求激进发明方面呈现倒U型关系：当绩效略低于期望时，企业倾向于过度投资于激进发明；而当绩效远高于期望时，则投资不足。我们的研究揭示了动机与能力之间的关键失配区域，为理解在位企业的技术追求提供了新的理论视角。
