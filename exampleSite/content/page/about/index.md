@@ -14,7 +14,7 @@ menu:
         params:
             icon: user
 ---
-如有交流需要，请联系我的邮箱：xiali1118@foxmail.com
+如有交流需要，请通过邮箱联系我：xiali1118@foxmail.com
 
 
 
