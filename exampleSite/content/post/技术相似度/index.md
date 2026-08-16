@@ -2,7 +2,7 @@
 author = "Joseph"
 title = "技术相似度计算方法"
 date = "2026-08-07"
-description = "Technology closeness or similarity"
+description = "Technology Closeness or Similarity"
 slug= "tech-sim"
 tags = ["Patent"]
 image = "cover.png"
