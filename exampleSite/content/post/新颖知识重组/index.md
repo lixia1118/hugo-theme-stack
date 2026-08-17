@@ -1,6 +1,6 @@
 +++
 author = "Joseph"
-title = "知识重组新颖度计算"
+title = "知识重组新颖度"
 date = "2026-08-07"
 description = "Novel Knowledge Recombination or Recombinatory Novelty"
 slug= "knowledge-recombinatory-novelty"

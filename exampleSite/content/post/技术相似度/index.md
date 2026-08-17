@@ -1,6 +1,6 @@
 +++
 author = "Joseph"
-title = "技术相似度计算方法"
+title = "技术相似度"
 date = "2026-08-07"
 description = "Technology Closeness or Similarity"
 slug= "tech-sim"
