@@ -15,4 +15,80 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // 预设的多彩低饱和学术色盘
+	const colors = [
+        // 绿色系
+        '#5B8C5A', // 青翠绿
+        '#2A9D8F', // 松石墨绿
+        '#6B705C', // 橄榄灰绿
+        '#40916C', // 森林绿
+        '#1B4332', // 深松绿
+
+        // 蓝色 / 青色系
+        '#3D5A80', // 经典石板蓝
+        '#0077B6', // 湛蓝
+        '#457B9D', // 灰雾蓝
+        '#005F73', // 深青海蓝
+        '#22577A', // 普鲁士蓝
+
+        // 红色 / 珊瑚系
+        '#D95D39', // 陶土暖红
+        '#9D0208', // 沉稳酒红
+        '#E76F51', // 珊瑚砖红
+        '#B56576', // 枯玫瑰红
+        '#A44A3F', // 赭红
+
+        // 橙 / 棕 / 杏色系
+        '#C18C5D', // 暖杏棕
+        '#CA6702', // 琥珀橙
+        '#B08968', // 浅焦糖
+        '#6C584C', // 浓缩咖啡棕
+
+        // 紫色 / 浆果系
+        '#7B2CBF', // 雅致紫
+        '#6D597A', // 丁香灰紫
+        '#5A189A', // 罗兰深紫
+
+        // 灰蓝 / 炭调系
+        '#4A4E69', // 烟灰蓝
+        '#495057'  // 石板深灰
+    ];
+
+    // 将分类名称字符串转换为唯一的颜色索引
+    function getCategoryColor(str) {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            hash = (hash << 5) - hash + str.charCodeAt(i);
+            hash |= 0;
+        }
+        const index = Math.abs(hash) % colors.length;
+        return colors[index];
+    }
+
+    // 针对全站所有的 Categories（卡片分类胶囊、右侧 Categories 小工具列表）
+    const categorySelectors = [
+        '.article-category a',
+        '.widget-categories a',
+        '.widget--categories a',
+        '.category-list a',
+        'a[href*="/categories/"]'
+    ];
+
+    const categoryElements = document.querySelectorAll(categorySelectors.join(', '));
+
+    categoryElements.forEach(el => {
+        // 获取分类纯文字名称（去除数字计数等）
+        const textNode = el.childNodes[0];
+        const categoryName = (textNode ? textNode.textContent : el.textContent).trim().toLowerCase();
+        
+        if (categoryName) {
+            const color = getCategoryColor(categoryName);
+            // 必须使用 setProperty + important 穿透主题默认变量
+            el.style.setProperty('background-color', color, 'important');
+            el.style.setProperty('color', '#ffffff', 'important');
+            el.style.setProperty('border', 'none', 'important');
+        }
+    });
+});
 </script>
