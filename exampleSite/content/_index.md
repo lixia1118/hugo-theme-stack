@@ -1,8 +1,2 @@
----
-menu:
-    main:
-        name: Home
-        weight: -100
-        params:
-            icon: home
----
+## 欢迎来到我的博客
+本站记录了我的部分科研工作，例如对复杂专利指标的构造

@@ -1,3 +1,18 @@
+module:
+  mounts:
+    - source: static
+      target: static
+    - source: content
+      target: content
+    - source: layouts
+      target: layouts
+    - source: data
+      target: data
+    - source: assets
+      target: assets
+    - source: archetypes
+      target: archetypes
+
 baseurl: "https://lixia1118.github.io/hugo-theme-stack/"
 languageCode: en-us
 theme: hugo-theme-stack
@@ -33,7 +48,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: /favicon.ico
+    favicon: favicon.ico
 
     footer:
         since: 2021
@@ -52,6 +67,7 @@ params:
             src: img/avatar.png
 
     article:
+        headingAnchor: true
         math: true
         toc: true
         readingTime: true
@@ -204,6 +220,8 @@ related:
 
 markup:
   goldmark:
+    renderer:
+      unsafe: true    # 核心：允许在 Markdown 中渲染 iframe 和 object 标签
     extensions:
       passthrough:
         enable: true
