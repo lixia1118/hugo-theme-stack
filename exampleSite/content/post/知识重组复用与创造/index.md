@@ -1,6 +1,6 @@
 +++
 author = "Joseph"
-title = "知识重组复用与创造"
+title = "知识重组利用与创造"
 date = "2026-08-17"
 description = "Knowledge Recombinant Creation & Reuse"
 slug= "recombinant-creation-reuse"
@@ -38,8 +38,8 @@ Carnabuci & Operti (2013) 的重要贡献在于识别出重组能力的**两个�
 
 本脚本实现了 Carnabuci & Operti (2013) 提出的两个核心指标：
 
-- **RC（重组创造率）**：衡量企业当年专利中，**新组合**占总组合的比例
-- **RR（重组利用度）**：衡量企业在历史中**重复使用**技术组合的程度
+- **RC（重组创造）**：衡量企业当年专利中，**新组合**占总组合的比例
+- **RR（重组利用）**：衡量企业在历史中**重复使用**技术组合的程度
 
 这两个指标均基于专利的 IPC（国际专利分类）代码构建的技术组合来计算，支持不同的 IPC 粒度（3位/4位）和不同的时间窗口（lag3/lag5/lag7）。
 
@@ -53,11 +53,11 @@ Carnabuci & Operti (2013) 的重要贡献在于识别出重组能力的**两个�
 
 | IPC位数  | 示例               | 粒度  | 说明    |
 | ------ | ---------------- | --- | ----- |
-| **3位** | F16, B03, H01    | 中等  | IPC小类 |
-| **4位** | F16H, B03C, H01M | 最细  | IPC小组 |
+| **3位** | F16, B03, H01    | 中等  | IPC大类class |
+| **4位** | F16H, B03C, H01M | 最细  | IPC小类subclass |
 
 
-> 如需添加其他位数（如5位或1位），只需在脚本顶部的 `IPC_DIGITS` 列表中添加，详见 [八-1 配置参数](#八代码配置说明)。
+> 如需添加其他位数（如5位），只需在脚本顶部的 `IPC_DIGITS` 列表中添加，详见 [八-1 配置参数](#八代码配置说明)。
 
 ### 2.2 知识组合的生成
 
@@ -209,19 +209,13 @@ IPC 4位码集合: {F16H, B03C, H01M}
 
 ## 五、数据预处理
 
-### 5.1 专利ID提取逻辑（行级优先级）
+### 5.1 专利ID提取逻辑
 
-每行专利优先使用非空的 `公开公告号`（去除末尾字母后缀 A/B/U/S），若为空则 fallback 到 `newipzlid`，若仍为空则生成兜底ID：`股票代码_年份_原始索引`。
-
-```
-行1: 公开公告号 = "CN101A"  → patent_id = "CN101"
-行2: 公开公告号 = ""         → 尝试 newipzlid
-行3: 公开公告号 = NaN        → 尝试 newipzlid
-```
+每行专利优先使用干净的 `公开公告号_clean`（去除末尾字母后缀 A/B/U/S），因为同一个专利可能因申请阶段不同而产生多个公开公告号。
 
 ### 5.2 去重逻辑
 
-在分块读取时，同一块内按 `股票代码 + 公开公告号_clean` 去重（保留第一条），不同块之间的重复无法在本脚本内检测。
+在分块读取时，同一块内按 `股票代码 + 公开公告号_clean` 去重。
 
 ### 5.3 设计专利过滤
 
@@ -229,7 +223,7 @@ IPC 4位码集合: {F16H, B03C, H01M}
 
 ### 5.4 畸形行处理（`_CSVChunkReader`）
 
-使用 Python 内置 `csv` 模块逐行读取大CSV，健壮处理以下异常：
+使用 Python 内置 `csv` 模块逐行读取大CSV，处理以下异常：
 
 - **列数不匹配**：若某行列数与表头不一致，跳过该行
 - **解码失败**：通过 `errors='replace'` 替换不可见字符
@@ -436,7 +430,7 @@ IPC_DIGITS = [3, 4, 5]   # 添加5位IPC
 → 重组利用 = NaN
 ```
 
-**这是正常行为**，不会产生自组合。`safe_mean` 自动跳过 NaN 值，因此公司年度均值只基于有效专利计算。
+**这是正常情况**，不会产生自组合。`safe_mean` 自动跳过 NaN 值，因此公司年度均值只基于有效专利计算。
 
 ### 9.5 跨块重复无法检测
 
@@ -450,6 +444,3 @@ IPC_DIGITS = [3, 4, 5]   # 添加5位IPC
 3. Hargadon, A., & Sutton, R. I. (1997). Technology brokering and innovation in a product development firm. *Administrative Science Quarterly*, 42(4), 716-749.
 4. Henderson, R. M., & Clark, K. B. (1990). Architectural innovation: The reconfiguration of existing product technologies and the failure of established firms. *Administrative Science Quarterly*, 35(1), 9-30.
 5. Schumpeter, J. A. (1934). *The Theory of Economic Development*. Harvard University Press.
----
-
-*最后更新：2026年4月*
