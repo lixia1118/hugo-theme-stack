@@ -1,4 +1,12 @@
 {{ define "main" }}
+    {{/* 1. 渲染 _index.md 的正文内容 */}}
+    {{ if .Content }}
+    <section class="article-content custom-homepage-content" style="background: var(--card-background); border-radius: var(--card-border-radius); box-shadow: var(--shadow-l1); padding: 30px; margin-bottom: 25px;">
+        {{ .Content }}
+    </section>
+    {{ end }}
+
+    {{/* 2. 原有的文章列表逻辑 */}}
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}
