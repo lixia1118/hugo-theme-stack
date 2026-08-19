@@ -16,8 +16,8 @@ menu:
 ---
 如有交流需要，请通过邮箱联系我：xiali1118@foxmail.com
 
+<!--
 ## 个人简历：
-
 <div style="margin-top: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
     <object data="CV-XIALI.pdf" type="application/pdf" width="100%" height="800px">
         <iframe src="CV-XIALI.pdf" width="100%" height="800px" style="border: none;">
@@ -25,3 +25,4 @@ menu:
         </iframe>
     </object>
 </div> 
+-->
