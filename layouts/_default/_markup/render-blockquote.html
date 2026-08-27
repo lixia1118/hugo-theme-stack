@@ -1,0 +1,48 @@
+{{/* 匹配 GitHub 风格的 [!NOTE], [!TIP], [!WARNING], [!IMPORTANT], [!CAUTION] */}}
+{{- $raw := .Text -}}
+{{- $type := "" -}}
+{{- $title := "" -}}
+{{- $icon := "" -}}
+
+{{- if strings.HasPrefix (strings.TrimLeft " \n\r\t" $raw) "<p>[!NOTE]" -}}
+    {{- $type = "note" -}}
+    {{- $title = "Note" -}}
+    {{- $icon = "ℹ️" -}}
+    {{- $raw = replaceRE `^<p>\[!NOTE\]\s*` "<p>" $raw 1 -}}
+{{- else if strings.HasPrefix (strings.TrimLeft " \n\r\t" $raw) "<p>[!TIP]" -}}
+    {{- $type = "tip" -}}
+    {{- $title = "Tip" -}}
+    {{- $icon = "💡" -}}
+    {{- $raw = replaceRE `^<p>\[!TIP\]\s*` "<p>" $raw 1 -}}
+{{- else if strings.HasPrefix (strings.TrimLeft " \n\r\t" $raw) "<p>[!WARNING]" -}}
+    {{- $type = "warning" -}}
+    {{- $title = "Warning" -}}
+    {{- $icon = "⚠️" -}}
+    {{- $raw = replaceRE `^<p>\[!WARNING\]\s*` "<p>" $raw 1 -}}
+{{- else if strings.HasPrefix (strings.TrimLeft " \n\r\t" $raw) "<p>[!IMPORTANT]" -}}
+    {{- $type = "important" -}}
+    {{- $title = "Important" -}}
+    {{- $icon = "🔔" -}}
+    {{- $raw = replaceRE `^<p>\[!IMPORTANT\]\s*` "<p>" $raw 1 -}}
+{{- else if strings.HasPrefix (strings.TrimLeft " \n\r\t" $raw) "<p>[!CAUTION]" -}}
+    {{- $type = "caution" -}}
+    {{- $title = "Caution" -}}
+    {{- $icon = "🛑" -}}
+    {{- $raw = replaceRE `^<p>\[!CAUTION\]\s*` "<p>" $raw 1 -}}
+{{- end -}}
+
+{{- if $type -}}
+<div class="callout callout-{{ $type }}">
+    <div class="callout-title">
+        <span class="callout-icon">{{ $icon }}</span>
+        <span class="callout-label">{{ $title }}</span>
+    </div>
+    <div class="callout-content">
+        {{ $raw | safeHTML }}
+    </div>
+</div>
+{{- else -}}
+<blockquote>
+    {{ .Text | safeHTML }}
+</blockquote>
+{{- end -}}

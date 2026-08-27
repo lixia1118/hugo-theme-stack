@@ -143,7 +143,7 @@ tags = [
 $$
 M_{ik} = 
 \begin{cases}
-1 & \text{若公司 } i \text{ 在 } t \text{ 年披露了议题 } k (x_{ikt} > 0) \\
+1 & \text{若公司 } i \text{ 在 } t \text{ 年披露了议题 } k \ (x_{ikt} > 0) \\
 0 & \text{否则}
 \end{cases}
 $$
