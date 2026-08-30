@@ -1,7 +1,7 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
 /* 1. 覆盖 Hugo Stack 主题默认字体变量 */
 :root {
-    --base-font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", "STSong", serif;
+    --base-font-family: "Georgia", "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", "STSong", serif;
     --article-font-family: var(--base-font-family);
     --heading-font-family: var(--base-font-family);
 }
@@ -134,7 +134,7 @@ kbd {
 
 /* 6. 分类标题文字 */
 .subsection-list article .article-title {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
     font-weight: 700 !important;
     color: #212529 !important; /* 清晰深灰/黑 */
     text-shadow: none !important;

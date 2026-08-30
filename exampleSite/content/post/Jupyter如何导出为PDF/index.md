@@ -1,6 +1,6 @@
 +++
 author = "Joseph"
-title = " Jupyter Notebook 如何导出为 PDF或其他格式？"
+title = " Jupyter Notebook如何导出为PDF或其他格式？"
 date = "2026-08-27"
 description = ""
 slug= "jupyter-pdf"
@@ -11,8 +11,9 @@ categories = [
 tags = [
     "Python"
 ]
+
 +++
-Jupyter Notebook 是科研、数据分析和机器学习中非常常用的工具。它最大的特点是可以在同一个文件中同时保存 Python 代码、运行结果、数学公式、图表以及 Markdown 文字说明。但 `.ipynb` 文件本身并不特别适合直接分享，vscode用户在导出为PDF或其他格式时经常遇阻。对此，本文介绍几种比较实用的方案。
+Jupyter Notebook 是数据分析常用的工具。它最大的特点是可以在同一个文件中同时保存 Python 代码、运行结果、数学公式、图表以及 Markdown 文字说明。但 `.ipynb` 文件本身并不特别适合直接分享，vscode用户在导出为PDF或其他格式时经常遇阻。对此，本文介绍几种比较实用的方案。
 
 ## 一、直接通过 Jupyter Notebook 导出 PDF
 
@@ -109,4 +110,4 @@ jupyter nbconvert --to webpdf [文件名].ipynb
 
 ## 参考资料
 
-1. [7 Effective Ways to Download Jupyter Notebooks as PDF](https://www.pdfgear.com/pdf-converter/how-to-download-jupyter-notebook-as-pdf.htm)
++ [7 Effective Ways to Download Jupyter Notebooks as PDF](https://www.pdfgear.com/pdf-converter/how-to-download-jupyter-notebook-as-pdf.htm)
